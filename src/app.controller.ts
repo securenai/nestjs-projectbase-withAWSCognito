@@ -8,7 +8,7 @@ export class AppController {
   @Get('/login')
   @Render('login')
   root() {
-    return;
+    return { title: 'Login' };
   }
 
   @Get('/register')
