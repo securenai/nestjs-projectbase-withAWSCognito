@@ -1,0 +1,30 @@
+### Create a new user 
+POST http://localhost:4000/auth/signup 
+Content-Type: application/json
+
+{
+  "name": "JohnWick", 
+  "email": "babayaga@wrathmail.com",
+  "password": "andyss"
+}
+
+### Gets a particular user 
+GET http://localhost:4000/auth/user/4
+Content-Type: application/json 
+
+### Gets all users with this criteria  
+GET http://localhost:4000/auth/findAllUsers?email=test@tesdt.com
+Content-Type: application/json 
+
+### Update a user 
+PATCH http://localhost:4000/auth/updateUser/4
+Content-Type: application/json
+
+{
+  "password": "drowssap"
+}
+
+
+### Deletes a user
+DELETE http://localhost:4000/auth/user/3
+Content-Type: application/json
