@@ -28,3 +28,4 @@ Content-Type: application/json
 ### Deletes a user
 DELETE http://localhost:4000/auth/user/3
 Content-Type: application/json
+
