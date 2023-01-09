@@ -7,6 +7,7 @@ import { UsersModule } from './users/users.module';
 // DB connection
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './users/user.entity';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { User } from './users/user.entity';
        */
       synchronize: true,
     }),
+    AuthModule,
     UsersModule,
     ConfigModule.forRoot(),
   ],

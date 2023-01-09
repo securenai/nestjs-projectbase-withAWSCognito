@@ -7,9 +7,12 @@ import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
 
 async function bootstrap() {
-  const app = await NestFactory.create<NestExpressApplication>(AppModule);
+  const app = await NestFactory.create<NestExpressApplication>(AppModule, {
+    cors: true,
+  });
   // allows nestjs to strip all properties sent in a request
   // that was now allowed via decorators
+  app.enableCors();
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true, // for security
